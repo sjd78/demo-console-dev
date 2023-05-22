@@ -1,0 +1,11 @@
+node_modules/
+coverage/
+dist/
+
+# misc
+.DS_Store
+.env*
+.eslintcache
+
+# VSCode
+.vscode/
