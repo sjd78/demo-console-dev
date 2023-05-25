@@ -19,7 +19,7 @@ console with a dev build to see what is going on inside console.  So....
   1. watch the frontend build fail horribly
   1. read up (again) on webpack 4, legacy openssl, bad crypto hash algos, upgrading to webpack 5, tweaking package.json files in console to do things "right", realizing that not even Vojtech has this nut cracked, give up and go get ~~a stiff bourbon~~ some more coffee
 
-But ... oh wait ... the dev setup for my plugin has console running in a off-cluster container.  Maybe there is something there!
+***But ... oh wait ...*** the dev setup for my plugin has console running in a off-cluster container.  Maybe there is something there!
 
 
 ### Attempt 2 - try using console's Dockerfiles to build a dev mode container image...
@@ -40,7 +40,7 @@ podman build -t localhost/console:test -f Dockerfile .
 
 It is a huge annoyance to try to use images out of openshift ci repos!  Like, huge.
 
-But ... oh wait ... maybe it would be easy to adapt the existing Dockerfile to my own and use public images!?
+***But ... oh wait ...*** maybe it would be easy to adapt the existing Dockerfile to my own and use public images!?
 
 
 ### Attempt 3 - adapt one of console's Dockerfiles to build my own local container with dev mode console...
@@ -59,9 +59,9 @@ But ... oh wait ... maybe it would be easy to adapt the existing Dockerfile to m
 
 #### Why use patches instead of PR to console?
 
-  ...takes too long to PR
-  ...patches can be added/removed/tuned as needed
-  ...even if PR, would be be able to backport from master to 4.11?  patches can
+ - ...takes too long to get a PR reviewed and merged
+ - ...patches can be added/removed/tuned as needed
+ - ...even with a PR, would be be able to backport from master to 4.11?  patches can
 
 
 ## What now?
